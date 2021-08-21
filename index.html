@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
         <style>
             @font-face {
 	font-family: 'meldes'; 
@@ -51,22 +51,20 @@
         <h1 class="text-center pb-4" style="font-family: 'Noto Serif', serif; font-style: italic;">Окружность и круг. Сегмент и сектор круга.</h2>
         <div class="row">
         <div class="card shadow col-sm mx-lg-2 my-2">
-            <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Площадь круга</h5>
-              <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".<br><br>Формула: S=πR²</p>
+              <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Площадь круга</b></h5>
+              <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".<br><br>Формула: S=πR²</p>
               <div class="form-group">
                 <fieldset>
-                    <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_round_square" id="radius_round_square" style="font-family: 'Open Sans', sans-serif;">
+                    <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_round_square" id="radius_round_square" style="font-family: 'Noto Serif', serif;">
                   
                 </fieldset>
-                <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round_square()">Рассчитать</button>
-                <p class="card-text my-3" id="result_round_square">Ответ:</p>
+                <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round_square()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+                <p class="card-text my-3" id="result_round_square" style="font-family: 'Noto Serif', serif;">Ответ:</p>
               </div>
             </div>
         </div>
         <div class="card shadow col-sm mx-lg-2 my-2">
-          <img src="img/круг.jpg" class="card-img-top pt-3" alt="фотка круга">
           <div class="card-body">
             <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Длина окружности</h5>
             <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".<br><br>Формула: D=2πR</p>
@@ -81,7 +79,6 @@
           </div>
       </div>
       <div class="card shadow col-sm mx-lg-2 my-2">
-        <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
         <div class="card-body">
           <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Длина хорды</h5>
           <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга (в см) и градусную меру (в ) в окошко ниже и нажмите на "Рассчитать".<br><br>AB = 2r sin   α 2</p>
