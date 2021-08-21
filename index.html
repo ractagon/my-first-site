@@ -11,6 +11,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
         <style>
             @font-face {
 	font-family: 'meldes'; 
@@ -19,16 +22,16 @@
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark align-middle" style="background: url(img/верх-фон.jpg);">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background: url(img/верх-фон.jpg);">
             <div class="container-fluid">
-              <!-- <p style="font-family: 'meldes'; font-size: 40px; text-align: center;" class="navbar-brand">MathRG.ru</p> -->
-              <a class="navbar-brand" href="#!"><img scr="img/MathRG.png"></a>
+              <a class="navbar-brand m-lg-3" href="#!"><img src="math.png" alt="MathRG.ru" height="50" style="padding-left: 20px;"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
               <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav me-auto">
+                <div class="float-right">
+                <ul class="navbar-nav float-right">
                   <li class="nav-item">
                     <a class="nav-link active" href="#">Home
                       <span class="visually-hidden">(current)</span>
@@ -38,33 +41,111 @@
                     <a class="nav-link" href="#">Features</a>
                   </li>
                 </ul>
+                </div>
               </div>
             </div>
         </nav>
-        <!-- <p>Площадь круга</p>
-        <input type="text" name="radius" id="radius" placeholder="Радиус круга" required>
-        <input type="button" id="calculate" onclick="round()" value="Расситать площадь">
-        <p id="result">пиздец)</p> -->
-        <div class="m-1">
+        <div class="m-2">
         <div class="container pt-5">
+        <section id="roundsection">
+        <h1 class="text-center pb-4" style="font-family: 'Noto Serif', serif;">Окружность и круг. Сегмент и сектор круга.</h2>
         <div class="row">
-        <p class="col-sm-4" style="font-family: 'Open Sans', sans-serif; font-size: 25px;"><strong>Круг</strong> — это часть плоскости, ограниченная окружностью. Центр данной окружности называется <strong>центром круга</strong>, а расстояние от центра до любой точки окружности — <strong>радиусом круга</strong>:</p>
-        <div class="card shadow col-sm-5 float-right">
-            <img src="img/круг.jpg" class="card-img-top" alt="...">
+        <div class="card shadow col-sm mx-lg-2 my-2">
+            <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
             <div class="card-body">
               <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Площадь круга</h5>
-              <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга в окошко ниже и нажмите на "Рассчитать площадь".</p>
+              <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".<br><br>Формула: S=πR²</p>
               <div class="form-group">
                 <fieldset>
-                    <input type="text" class="form-control m-2" placeholder="Введите радиус" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
+                    <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_round_square" id="radius_round_square" style="font-family: 'Open Sans', sans-serif;">
                   
                 </fieldset>
-                <button type="button" class="btn btn-primary m-2" id="calculate" onclick="round()">Рассчитать площадь</button>
-                <p class="card-text m-3" id="result">Ответ:</p>
+                <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round_square()">Рассчитать</button>
+                <p class="card-text my-3" id="result_round_square">Ответ:</p>
               </div>
             </div>
+        </div>
+        <div class="card shadow col-sm mx-lg-2 my-2">
+          <img src="img/круг.jpg" class="card-img-top pt-3" alt="фотка круга">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Длина окружности</h5>
+            <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".<br><br>Формула: D=2πR</p>
+            <div class="form-group">
+              <fieldset>
+                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_dlina_okruj" id="radius_dlina_okruj" style="font-family: 'Open Sans', sans-serif;">
+                
+              </fieldset>
+              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_okruj()">Рассчитать</button>
+              <p class="card-text my-3" id="result_dlina_okruj">Ответ:</p>
+            </div>
+          </div>
+      </div>
+      <div class="card shadow col-sm mx-lg-2 my-2">
+        <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Длина хорды</h5>
+          <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга (в см) и градусную меру (в ) в окошко ниже и нажмите на "Рассчитать".<br><br>AB = 2r sin   α 2</p>
+          <div class="form-group">
+            <fieldset>
+                <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
+              
+            </fieldset>
+            <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()">Рассчитать</button>
+            <p class="card-text my-3" id="result">Ответ:</p>
           </div>
         </div>
+      </div>
+
+      </div>
+      <div class="row">
+        <div class="card shadow col-sm mx-lg-2 my-2">
+            <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Площадь круга</h5>
+              <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".</p>
+              <div class="form-group">
+                <fieldset>
+                    <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
+                  
+                </fieldset>
+                <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()">Рассчитать</button>
+                <p class="card-text my-3" id="result">Ответ:</p>
+              </div>
+            </div>
+        </div>
+        <div class="card shadow col-sm mx-lg-2 my-2">
+          <img src="img/круг.jpg" class="card-img-top pt-3" alt="фотка круга">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Длина окружности</h5>
+            <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".</p>
+            <div class="form-group">
+              <fieldset>
+                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
+                
+              </fieldset>
+              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()">Рассчитать</button>
+              <p class="card-text my-3" id="result">Ответ:</p>
+            </div>
+          </div>
+      </div>
+      <div class="card shadow col-sm mx-lg-2 my-2">
+        <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Площадь круга</h5>
+          <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга в окошко ниже и нажмите на "Рассчитать".</p>
+          <div class="form-group">
+            <fieldset>
+                <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
+              
+            </fieldset>
+            <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()">Рассчитать</button>
+            <p class="card-text my-3" id="result">Ответ:</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      </section>
         </div>
 
         </div>
@@ -75,18 +156,17 @@
 
 
         <script>
-            function round()
+            function round_square()
             {
-                var radius = document.getElementById('radius').value
-
-                document.getElementById('result').innerHTML = 'Ответ: Площадь круга равна ' + math.round(math.pi * radius * radius,5) + ' или ' + (radius*radius) + 'π'
+                var radius = document.getElementById('radius_round_square').value
+                document.getElementById('result_round_square').innerHTML = 'Ответ: Площадь круга равна ' + math.round(math.pi * radius * radius,5) + ' см<sup>2</sup> или ' + (radius*radius) + 'π';
+                
             }
-            function refreg()
+            function dlina_okruj()
             {
-                var shirina_1 = document.getElementById('shirina_1').value
-                var dlina_1 = document.getElementById('dlina_1').value
+                var radius = document.getElementById('radius_dlina_okruj').value
 
-                document.getElementById('result_1').innerHTML = 'Площадь холодоса равна ' + (shirina_1 * dlina_1)
+                document.getElementById('result_dlina_okruj').innerHTML = 'Ответ: Длина окружности равна ' + math.round(math.pi * radius * 2,5) + ' см<sup>2</sup> или ' + (2*radius) + 'π'
             }
         </script>
     </body>
