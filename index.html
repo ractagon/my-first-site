@@ -44,7 +44,7 @@
             <div class="card-header" role="tab" id="headingOne" style="background-color: white;">
               <h5 class="mb-0" style="font-family: 'Noto Serif', serif;">
                 <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: black; text-decoration: none; text-transform: uppercase;">
-                  Определения и свойства.
+                  Определения и свойства. (НАЖМИТЕ ЧТОБЫ ОТКРЫТЬ)
                 </a>
               </h5>
             </div>
@@ -97,16 +97,16 @@
       </div>
       <div class="card shadow col-sm mx-lg-2 my-2">
         <div class="card-body">
-          <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды</b></h5>
-          <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру (в ) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin \frac{a}{2}$$</p>
+          <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды (через центральный угол)</b></h5>
+          <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin \frac{a}{2}$$</p>
 
           <div class="form-group">
             <fieldset>
-                <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Noto Serif', serif;">
-              
+                <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_dlina_hordi_kruga_centr" id="radius_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+                <input type="number" class="form-control my-2" placeholder="Введите угол (в °)" name="ugol_dlina_hordi_kruga_centr" id="ugol_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
             </fieldset>
-            <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
-            <p class="card-text my-3" id="result" style="font-family: 'Noto Serif', serif;">Ответ:</p>
+            <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_hordi_kruga_centr()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+            <p class="card-text my-3" id="result_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">Ответ:</p>
           </div>
         </div>
       </div>
@@ -114,50 +114,50 @@
       </div>
       <div class="row">
         <div class="card shadow col-sm mx-lg-2 my-2">
-            <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
-            <div class="card-body">
-              <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Площадь круга</h5>
-              <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".</p>
-              <div class="form-group">
-                <fieldset>
-                    <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
-                  
-                </fieldset>
-                <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()">Рассчитать</button>
-                <p class="card-text my-3" id="result">Ответ:</p>
-              </div>
-            </div>
-        </div>
-        <div class="card shadow col-sm mx-lg-2 my-2">
-          <img src="img/круг.jpg" class="card-img-top pt-3" alt="фотка круга">
           <div class="card-body">
-            <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Длина окружности</h5>
-            <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать".</p>
+            <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды (через центральный угол)</b></h5>
+            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin \frac{a}{2}$$</p>
+  
             <div class="form-group">
               <fieldset>
-                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
-                
+                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_dlina_hordi_kruga_centr" id="radius_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+                  <input type="number" class="form-control my-2" placeholder="Введите угол (в °)" name="ugol_dlina_hordi_kruga_centr" id="ugol_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
               </fieldset>
-              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()">Рассчитать</button>
-              <p class="card-text my-3" id="result">Ответ:</p>
+              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_hordi_kruga_centr()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+              <p class="card-text my-3" id="result_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">Ответ:</p>
             </div>
           </div>
-      </div>
-      <div class="card shadow col-sm mx-lg-2 my-2">
-        <img src="img/круг.jpg" class="card-img-top pt-3" alt="...">
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold" style="font-family: 'Open Sans', sans-serif;">Площадь круга</h5>
-          <p class="card-text" style="font-family: 'Open Sans', sans-serif;">Введите радиус круга в окошко ниже и нажмите на "Рассчитать".</p>
-          <div class="form-group">
-            <fieldset>
-                <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius" id="radius" style="font-family: 'Open Sans', sans-serif;">
-              
-            </fieldset>
-            <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round()">Рассчитать</button>
-            <p class="card-text my-3" id="result">Ответ:</p>
+        </div>
+        <div class="card shadow col-sm mx-lg-2 my-2">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды (через центральный угол)</b></h5>
+            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin \frac{a}{2}$$</p>
+  
+            <div class="form-group">
+              <fieldset>
+                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_dlina_hordi_kruga_centr" id="radius_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+                  <input type="number" class="form-control my-2" placeholder="Введите угол (в °)" name="ugol_dlina_hordi_kruga_centr" id="ugol_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+              </fieldset>
+              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_hordi_kruga_centr()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+              <p class="card-text my-3" id="result_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">Ответ:</p>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="card shadow col-sm mx-lg-2 my-2">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды (через центральный угол)</b></h5>
+            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin \frac{a}{2}$$</p>
+  
+            <div class="form-group">
+              <fieldset>
+                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_dlina_hordi_kruga_centr" id="radius_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+                  <input type="number" class="form-control my-2" placeholder="Введите угол (в °)" name="ugol_dlina_hordi_kruga_centr" id="ugol_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+              </fieldset>
+              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_hordi_kruga_centr()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+              <p class="card-text my-3" id="result_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">Ответ:</p>
+            </div>
+          </div>
+        </div>
 
       </div>
       </section>
@@ -183,6 +183,23 @@
 
                 document.getElementById('result_dlina_okruj').innerHTML = 'Ответ: Длина окружности равна ' + math.round(math.pi * radius * 2,5) + ' см или ' + (2*radius) + 'π'
             }
+            function dlina_hordi_kruga_centr()
+            {
+                var radius = document.getElementById('radius_dlina_hordi_kruga_centr').value
+                var ugol = document.getElementById('ugol_dlina_hordi_kruga_centr').value
+                var sinus_ugla
+                with(Math){
+                  sinus_ugla=sin(Math.PI/180*(ugol/2)); 
+                }
+
+                document.getElementById('result_dlina_hordi_kruga_centr').innerHTML = 'Ответ: Длина хорды равна ' + math.round(sinus_ugla * radius * 2,5) + ' см'
+            }
+            $(document).ready(function(){
+            $('.spoiler_links').click(function(){
+              $(this).parent().children('div.spoiler_body').toggle('normal');
+              return false;
+            });
+            });
         </script>
     </body>
 </html>
