@@ -75,6 +75,7 @@
         <div class="row">
         <div class="card shadow col-sm mx-lg-2 my-2">
             <div class="card-body">
+              <img class="card-img-top" src="img/площадькруга-min.jpg" alt="фотка кружка">
               <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Площадь круга</b></h5>
               <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$S=πR²$$</p>
               <div class="form-group">
@@ -122,7 +123,7 @@
         <div class="card shadow col-sm mx-lg-2 my-2">
           <div class="card-body">
             <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды (через вписанный угол)</b></h5>
-            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin a$$</p>
+            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру вписанный угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin a$$</p>
   
             <div class="form-group">
               <fieldset>
@@ -137,7 +138,99 @@
         <div class="card shadow col-sm mx-lg-2 my-2">
           <div class="card-body">
             <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина дуги (через центральный угол)</b></h5>
-            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$l =\frac{πr}{180°} * a$$</p>
+            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$l =\frac{πr}{180°} ∙ a$$</p>
+  
+            <div class="form-group">
+              <fieldset>
+                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см) — r" name="radius_dlina_dugi_kruga_centr" id="radius_dlina_dugi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+                  <input type="number" class="form-control my-2" placeholder="Введите угол (в °) — a" name="ugol_dlina_dugi_kruga_centr" id="ugol_dlina_dugi_kruga_centr" style="font-family: 'Noto Serif', serif;">
+              </fieldset>
+              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_dugi_kruga_centr()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+              <p class="card-text my-3" id="result_dlina_dugi_kruga_centr" style="font-family: 'Noto Serif', serif;">Ответ:</p>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow col-sm mx-lg-2 my-2">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Площадь сектора (через центральный угол)</b></h5>
+            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$S =\frac{πr²}{360°} ∙ a$$</p>
+  
+            <div class="form-group">
+              <fieldset>
+                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_ploshad_sector_kruga_centr" id="radius_ploshad_sector_kruga_centr" style="font-family: 'Noto Serif', serif;">
+                  <input type="number" class="form-control my-2" placeholder="Введите угол (в °)" name="ugol_ploshad_sector_kruga_centr" id="ugol_ploshad_sector_kruga_centr" style="font-family: 'Noto Serif', serif;">
+              </fieldset>
+              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="ploshad_sector_kruga_centr()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+              <p class="card-text my-3" id="result_ploshad_sector_kruga_centr" style="font-family: 'Noto Serif', serif;">Ответ:</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </section>
+
+        <section id="treugsection">
+          <h1 class="text-center pb-4 pt-4" style="font-family: 'Noto Serif', serif;"><b>Треугольник. Формулы и свойства.</b></h2>
+          <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" role="tab" id="headingOne" style="background-color: white;">
+                <h5 class="mb-0">
+                  <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: black; text-transform: uppercase; text-decoration: none;">
+                    Определения и свойства 🠗
+                  </a>
+                </h5>
+              </div>
+          
+              <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body">
+                  <h3>Определения</h3>
+                  Треугольник - фигура, которая состоит из трёх точек, не лежащих на одной прямой, и трёх отрезков, попарно соединяющих эти точки. Точки называются вершинами треугольника, а отрезки - его сторонами.                  Единичная окружность - окружность, радиус которой равна единице.<br>
+
+                  <h3>Основные свойства окружности</h3>
+                  1. Диаметр окружности равен двум радиусам.<br>  
+                  2. Кратчайшее расстояние от центра окружности к секущей (хорде) всегда меньше радиуса.<br>
+                  3. Через три точки, которые не лежат на одной прямым, можно провести только одну окружность.<br>
+                  4. Среди всех замкнутых кривых с одинаковой длиной, окружность имеет наибольшую площадь.<br>
+                  5. Если две окружности соприкасаются в одной точке, то эта точка лежит на прямой, что проходит через центры этих окружностей.<br><br>
+                  <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: black; text-transform: uppercase; font-family: 'Roboto Condensed', sans-serif; text-decoration: none;">
+                    СВЕРНУТЬ &#129045
+                  </a>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+          <div class="card shadow col-sm mx-lg-2 my-2">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Площадь круга</b></h5>
+                <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$S=πR²$$</p>
+                <div class="form-group">
+                  <fieldset>
+                      <input type="number" class="form-control my-2" placeholder="Введите радиус (в см) — r" name="radius_round_square" id="radius_round_square" style="font-family: 'Noto Serif', serif;">
+                    
+                  </fieldset>
+                  <button type="button" class="btn btn-dark my-2" id="calculate" onclick="round_square()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+                  <p class="card-text my-3" id="result_round_square" style="font-family: 'Noto Serif', serif;">Ответ:</p>
+                </div>
+              </div>
+          </div>
+          <div class="card shadow col-sm mx-lg-2 my-2">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина окружности</b></h5>
+              <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга(в см) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$D=2πR$$</p>
+              <div class="form-group">
+                <fieldset>
+                    <input type="number" class="form-control my-2" placeholder="Введите радиус (в см) — r" name="radius_dlina_okruj" id="radius_dlina_okruj" style="font-family: 'Noto Serif', serif;">
+                  
+                </fieldset>
+                <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_okruj()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
+                <p class="card-text my-3" id="result_dlina_okruj" style="font-family: 'Noto Serif', serif;">Ответ:</p>
+              </div>
+            </div>
+        </div>
+        <div class="card shadow col-sm mx-lg-2 my-2">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды (через центральный угол)</b></h5>
+            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin \frac{a}{2}$$</p>
   
             <div class="form-group">
               <fieldset>
@@ -149,28 +242,11 @@
             </div>
           </div>
         </div>
-        <div class="card shadow col-sm mx-lg-2 my-2">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold" style="font-family: 'Noto Serif', serif;"><b>Длина хорды (через центральный угол)</b></h5>
-            <p class="card-text" style="font-family: 'Noto Serif', serif;">Введите радиус круга (в см) и градусную меру центрального угла (в °) в окошко ниже и нажмите на "Рассчитать". Формула:<br><br>$$AB = 2r sin \frac{a}{2}$$</p>
   
-            <div class="form-group">
-              <fieldset>
-                  <input type="number" class="form-control my-2" placeholder="Введите радиус (в см)" name="radius_dlina_hordi_kruga_centr" id="radius_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
-                  <input type="number" class="form-control my-2" placeholder="Введите угол (в °)" name="ugol_dlina_hordi_kruga_centr" id="ugol_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">
-              </fieldset>
-              <button type="button" class="btn btn-dark my-2" id="calculate" onclick="dlina_hordi_kruga_centr()" style="font-family: 'Noto Serif', serif;">Рассчитать</button>
-              <p class="card-text my-3" id="result_dlina_hordi_kruga_centr" style="font-family: 'Noto Serif', serif;">Ответ:</p>
-            </div>
-          </div>
         </div>
-
-      </div>
+        </div>
       </section>
-        </div>
-
-        </div>
-
+      </div>
 
 
 
@@ -211,8 +287,21 @@
 
                 document.getElementById('result_dlina_hordi_kruga_vpis').innerHTML = 'Ответ: Длина хорды равна ' + math.round(sinus_ugla * radius * 2,5) + ' см'
             }
+            function dlina_dugi_kruga_centr()
+            {
+                var radius = document.getElementById('radius_dlina_dugi_kruga_centr').value
+                var ugol = document.getElementById('ugol_dlina_dugi_kruga_centr').value
 
+                document.getElementById('result_dlina_dugi_kruga_centr').innerHTML = 'Ответ: Длина дуги равна ' + math.round(Math.PI * radius * (ugol/180),5) + ' см'
+            }
 
+            function ploshad_sector_kruga_centr()
+            {
+                var radius = document.getElementById('radius_ploshad_sector_kruga_centr').value
+                var ugol = document.getElementById('ugol_ploshad_sector_kruga_centr').value
+
+                document.getElementById('result_ploshad_sector_kruga_centr').innerHTML = 'Ответ: Длина дуги равна ' + math.round(Math.PI * radius * radius * (ugol/360),5) + ' см'
+            }
             $(document).ready(function(){
             $('.spoiler_links').click(function(){
               $(this).parent().children('div.spoiler_body').toggle('normal');
